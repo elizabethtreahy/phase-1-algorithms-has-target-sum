@@ -1,6 +1,20 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  // let array = [4, 5, 6, 7, 8, 9, 10]
+  // let target = 19
+  let truthy = false
+  array.forEach((k, i) => {
+    array.forEach((j, l) => {
+      if (i != l) {
+        if (k + j === target) {
+          truthy = true
+        }
+      }    
+    })
+  }) 
+ return truthy
 }
+// console.log(hasTargetSum())
 
 /* 
   Write the Big O time complexity of your function here
